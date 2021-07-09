@@ -1,15 +1,15 @@
+const myApiKey = 'y8LcxMBXAVlwTrkOzkVo0HLLKHWDFhv27CEMAvIuZrI';
 
 const inputForm = document.getElementById('destination_details_form');
 inputForm.addEventListener('submit', submitForm);
 
-function submitForm(e) {
+async function submitForm(e) {
   e.preventDefault(); 
 
   const destination = e.target.elements['destination'].value;
   const location = e.target.elements['location'].value;
-  const photoURL = e.target.elements['photo'].value;
+  const photoURL = await getPhotoUrl(location);
   const desc = e.target.elements['description'].value;
-  console.log(e.target.elements)
   
   const destinationCard = createDestinationCard(
     destination,
@@ -24,6 +24,20 @@ function submitForm(e) {
 
   wishListContainer.appendChild(destinationCard);
   inputForm.reset();
+}
+
+async function getPhotoUrl(location){
+  const config = {
+    method: 'get',
+    url: `https://api.unsplash.com/search/photos/?client_id=${myApiKey}&query=${location}&orientation=landscape`
+  }
+  try {
+    let {data} = await axios(config);
+    return data.results[0].urls.small;
+  } catch (error){
+    console.error(error);
+    return null;
+  }
 }
 
 
