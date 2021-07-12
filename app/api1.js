@@ -2,18 +2,18 @@ const gifAPIKey = 'IXoVmB8nPNAomnOn7ObnlNYJ33VnO6G6';
 
 const formEl = document.getElementById('gif_details_form');
 
-formEl.addEventListener('submit', submitGIFform);
+formEl.addEventListener('submit', submitMovieForm);
 
-async function submitGIFform(e){
+async function submitMovieForm(e){
   e.preventDefault();
   
   const keyword = e.target.keyword.value;
   
-  createGifCardList(keyword);
+  createMovieCardList(keyword);
   formEl.reset();
 }
 
-async function createGifCardList(keyword){
+async function createMovieCardList(keyword){
 
   const target = document.getElementById('gif_container_1');
   target.innerHTML = '';

@@ -44,7 +44,7 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="app/script.js"></script>
 
-  <div class='container gif'>
+  <div class='container api'>
     <div class='row'>
       <div class="col-md-3">
         <form id="gif_details_form">
@@ -66,7 +66,7 @@
   </div>
   <script src='app/api1.js'></script>
 
-  <div class='container gif'>
+  <div class='container api'>
     <div class='row'>
       <div class="col-md-3">
         <form id="gif_details_form_2">
@@ -87,4 +87,26 @@
     </div>
   </div>
   <script src='app/api2.js'></script>
+
+  <div class='container api'>
+    <div class='row'>
+      <div class="col-md-3">
+        <form id="movie_details_form">
+          <div class="form-group">
+              <label for="movie_keyword">Movie Keyword</label>
+              <input required minlength="2" type="text" class="form-control" id="movie_keyword" placeholder="Enter the keyword of the Movie">
+          </div>
+          <button type="submit" class="btn btn-primary submit_btn">Search Movie</button>
+        </form>
+        <button id='clearMovies' class="btn btn-primary submit_btn">Clear Movies list</button>
+      </div>
+      <div class="col-md-9">
+        <h4 id="title">Movies</h4>
+        <div id="movie_container_1" class='results_container'>
+      </div>
+
+    </div>
+    </div>
+  </div>
+  <script src='app/api3.js'></script>
 </body>
