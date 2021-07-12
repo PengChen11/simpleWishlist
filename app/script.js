@@ -134,3 +134,5 @@ function removeDestination(event) {
     document.getElementById('title').innerHTML = 'Enter destination details';
   }
 }
+
+

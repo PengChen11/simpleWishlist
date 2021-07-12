@@ -35,12 +35,56 @@
           </div>
           <div class="col-md-9">
               <h4 id="title">Enter destination details</h4>
-              <div id="destinations_container">
+              <div id="destinations_container" class='results_container'>
               </div>
-
+              
           </div>
       </div>
   </div>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script type="module" src="app/script.js"></script>
+  <script src="app/script.js"></script>
+
+  <div class='container gif'>
+    <div class='row'>
+      <div class="col-md-3">
+        <form id="gif_details_form">
+          <div class="form-group">
+              <label for="keyword">GIF Keyword</label>
+              <input required minlength="2" type="text" class="form-control" id="keyword" placeholder="Enter the keyword of the GIF">
+          </div>
+          <button type="submit" class="btn btn-primary submit_btn">Search keyword</button>
+        </form>
+        <button id='clearGIF' class="btn btn-primary submit_btn">Clear Gif</button>
+      </div>
+      <div class="col-md-9">
+        <h4 id="title">Enter GIF keywords</h4>
+        <div id="gif_container_1" class='results_container'>
+      </div>
+
+    </div>
+    </div>
+  </div>
+  <script src='app/api1.js'></script>
+
+  <div class='container gif'>
+    <div class='row'>
+      <div class="col-md-3">
+        <form id="gif_details_form_2">
+          <div class="form-group">
+              <label for="keyword">GIF Keyword</label>
+              <input required minlength="2" type="text" class="form-control" id="keyword" placeholder="Enter the keyword of the GIF">
+          </div>
+          <button type="submit" class="btn btn-primary submit_btn">Create keyword button</button>
+        </form>
+        <button id='clearGIF_2' class="btn btn-primary submit_btn">Clear Gif</button>
+      </div>
+      <div class="col-md-9">
+        <h4 id="title">Enter GIF keywords</h4>
+        <div id="gif_container_2" class='results_container'>
+      </div>
+
+    </div>
+    </div>
+  </div>
+  <script src='app/api2.js'></script>
 </body>
