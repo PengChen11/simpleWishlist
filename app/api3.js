@@ -40,7 +40,7 @@ async function createMovieCardList(keyword){
 
 }
 
-let clearMoviesBtn = document.getElementById('clearMovies');
+const clearMoviesBtn = document.getElementById('clearMovies');
 clearMoviesBtn.addEventListener('click', ()=>{
   const target = document.getElementById('movie_container_1');
   target.innerHTML = '';
