@@ -1,5 +1,5 @@
-// const myAPI = 'https://simple-wishlist-svr.herokuapp.com';
-const myAPI = 'http://localhost:3000';
+const myAPI = 'https://simple-wishlist-svr.herokuapp.com';
+// const myAPI = 'http://localhost:3000';
 
 const inputForm = document.getElementById('destination_details_form');
 
