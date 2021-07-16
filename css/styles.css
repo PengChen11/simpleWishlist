@@ -36,3 +36,19 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.left {
+  border: solid;
+}
+
+.right{
+ border: solid;
+}
+
+.content_container{
+  min-height: 80%;
+}
+
+.content_container_row{
+  height: 80%;
+}

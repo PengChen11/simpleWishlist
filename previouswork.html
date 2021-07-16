@@ -1,0 +1,135 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacation Destinations WishList</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid">
+      <div class="container text-center">
+          <h1 class="display-4">Vacation Destinations WishList</h1>
+          <p class="lead">Found exciting places to visition on your next vacation? Use the form below to add them to your wishlist</p>
+      </div>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-3">
+              <form id="destination_details_form">
+                  <div class="form-group">
+                      <label for="destination">Destination name</label>
+                      <input required minlength="2" type="text" class="form-control" id="destination" placeholder="Enter the name of the destination">
+                  </div>
+                  <div class="form-group">
+                      <label for="location">Location</label>
+                      <input required minlength="2" type="text" class="form-control" id="location" placeholder="Where is it located?">
+                  </div>
+                  <div class="form-group">
+                      <label for="description">Description</label>
+                      <textarea type="text" class="form-control" id="description" placeholder="Where is it located?"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary submit_btn">Add to list</button>
+              </form>
+
+          </div>
+          <div class="col-md-9">
+              <h4 id="title">Enter destination details</h4>
+              <div id="destinations_container" class='results_container'>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="app/script.js"></script>
+
+  <div class='container api'>
+    <div class='row'>
+      <div class="col-md-3">
+        <form id="gif_details_form">
+          <div class="form-group">
+              <label for="keyword">GIF Keyword</label>
+              <input required minlength="2" type="text" class="form-control" id="keyword" placeholder="Enter the keyword of the GIF">
+          </div>
+          <button type="submit" class="btn btn-primary submit_btn">Search keyword</button>
+        </form>
+        <button id='clearGIF' class="btn btn-primary submit_btn">Clear Gif</button>
+      </div>
+      <div class="col-md-9">
+        <h4 id="title">Enter GIF keywords</h4>
+        <div id="gif_container_1" class='results_container'>
+      </div>
+
+    </div>
+    </div>
+  </div>
+  <script src='app/api1.js'></script>
+
+  <div class='container api'>
+    <div class='row'>
+      <div class="col-md-3">
+        <form id="gif_details_form_2">
+          <div class="form-group">
+              <label for="keyword">GIF Keyword</label>
+              <input required minlength="2" type="text" class="form-control" id="keyword" placeholder="Enter the keyword of the GIF">
+          </div>
+          <button type="submit" class="btn btn-primary submit_btn">Create keyword button</button>
+        </form>
+        <button id='clearGIF_2' class="btn btn-primary submit_btn">Clear Gif</button>
+      </div>
+      <div class="col-md-9">
+        <h4 id="title">Enter GIF keywords</h4>
+        <div id="gif_container_2" class='results_container'>
+      </div>
+
+    </div>
+    </div>
+  </div>
+  <script src='app/api2.js'></script>
+
+  <div class='container api'>
+    <div class='row'>
+      <div class="col-md-3">
+        <form id="movie_details_form">
+          <div class="form-group">
+              <label for="movie_keyword">Movie Keyword</label>
+              <input required minlength="2" type="text" class="form-control" id="movie_keyword" placeholder="Enter the keyword of the Movie">
+          </div>
+          <button type="submit" class="btn btn-primary submit_btn">Search Movie</button>
+        </form>
+        <button id='clearMovies' class="btn btn-primary submit_btn">Clear Movies list</button>
+      </div>
+      <div class="col-md-9">
+        <h4 id="title">Movies</h4>
+        <div id="movie_container_1" class='results_container'>
+      </div>
+
+    </div>
+    </div>
+  </div>
+  <script src='app/api3.js'></script>
+
+  <div class='container api'>
+    <div class='row'>
+      <div class="col-md-3">
+        <form id="mix_form">
+          <div class="form-group">
+              <label for="keyword_2">Movie and GIF Keyword</label>
+              <input required minlength="2" type="text" class="form-control" id="keyword_2" placeholder="Enter the keyword you want to search">
+          </div>
+          <button type="submit" class="btn btn-primary submit_btn">Generate card</button>
+        </form>
+        <button id='clearMix' class="btn btn-primary submit_btn">Clear Cards list</button>
+        <div id='card_container'></div>
+      </div>
+      <div class="col-md-9">
+        <h4 id="title">Movies & Gifs</h4>
+        <div id="mix_container" class='results_container'>
+      </div>
+
+    </div>
+    </div>
+  </div>
+  <script src='app/api4.js'></script>
+</body>

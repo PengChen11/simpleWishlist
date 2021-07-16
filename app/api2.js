@@ -30,7 +30,7 @@ async function createGifCardList2(keyword){
 
   const config = {
     method: 'get',
-    url:`https://api.giphy.com/v1/gifs/search?api_key=IXoVmB8nPNAomnOn7ObnlNYJ33VnO6G6&q=${keyword}&limit=20`
+    url:`https://api.giphy.com/v1/gifs/search?api_key=IXoVmB8nPNAomnOn7ObnlNYJ33VnO6G6&q=${keyword}&limit=12`
   }
   const {data}= await axios(config);
 
