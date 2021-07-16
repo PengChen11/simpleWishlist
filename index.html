@@ -18,6 +18,10 @@
       <div class="row content_container_row">
           <div class="col-md-4 p-3">
               <form id="destination_details_form">
+                  <div class="form-group d-none">
+                      <label for="_id"></label>
+                      <input minlength="2" type="number" class="form-control" id="_id">
+                  </div>
                   <div class="form-group">
                       <label for="destination">Destination name</label>
                       <input required minlength="2" type="text" class="form-control" id="destination" placeholder="Enter the name of the destination">
@@ -28,13 +32,15 @@
                   </div>
                   <div class="form-group">
                     <label for="URL">URL</label>
-                    <input required minlength="2" type="url" class="form-control" id="URL" placeholder="What its image url?">
+                    <input minlength="2" type="url" class="form-control" id="URL" placeholder="What its image url?">
                   </div>
                   <div class="form-group">
                       <label for="description">Description</label>
                       <textarea type="text" class="form-control" id="description" placeholder="Where is it located?"></textarea>
                   </div>
-                  <button type="submit" class="btn btn-primary submit_btn">Add to list</button>
+                  <button id='createBtn' type="submit" class="btn btn-primary submit_btn">Add to list</button>
+                  <button id='editBtn' class="btn btn-primary submit_btn d-none">Update this list</button>
+                  
               </form>
 
           </div>
